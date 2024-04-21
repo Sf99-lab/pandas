@@ -1,7 +1,7 @@
 import pandas as pd
 
 # read data
-titanic = pd.read_csv("./titanic.csv")
+titanic = pd.read_csv("sample_data/titanic.csv")
 
 print(titanic)
 

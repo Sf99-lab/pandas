@@ -1,6 +1,6 @@
 import pandas as pd
 
-titanic = pd.read_csv("./titanic.csv")
+titanic = pd.read_csv("sample_data/titanic.csv")
 
 print(titanic.head())
 

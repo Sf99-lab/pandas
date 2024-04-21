@@ -1,9 +1,9 @@
 import pandas as pd
 
-titanic = pd.read_csv("titanic.csv")
+titanic = pd.read_csv("sample_data/titanic.csv")
 print(titanic.head())
 
-air_quality = pd.read_csv("air_quality_long.csv", index_col="date.utc", parse_dates=True)
+air_quality = pd.read_csv("sample_data/air_quality_long.csv", index_col="date.utc", parse_dates=True)
 print(air_quality)
 
 

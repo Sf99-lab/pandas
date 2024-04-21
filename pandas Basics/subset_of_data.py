@@ -1,8 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-titanic = pd.read_csv("titanic.csv")
-air_quality = pd.read_csv("air_quality_long.csv", index_col="date.utc", parse_dates=True)
+titanic = pd.read_csv("sample_data/titanic.csv")
+air_quality = pd.read_csv("sample_data/air_quality_long.csv", index_col="date.utc", parse_dates=True)
 
 #The subset of data will be called no2_subset.
 # filter for no2 data only

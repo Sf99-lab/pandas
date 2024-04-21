@@ -1,13 +1,13 @@
 import pandas as pd
 
-air_quality_no2 = pd.read_csv("./air_quality_no2_long.csv",
+air_quality_no2 = pd.read_csv("sample_data/air_quality_no2_long.csv",
                               parse_dates = True)
 
 air_quality_no2 = air_quality_no2[["date.utc", "location",
                                    "parameter", "value"]]
 print("                  Table1 data\n", air_quality_no2.head())
 
-air_quality_pm25 = pd.read_csv("./air_quality_pm25_long.csv",
+air_quality_pm25 = pd.read_csv("sample_data/air_quality_pm25_long.csv",
                                parse_dates=True)
 air_quality_pm25 = air_quality_pm25[["date.utc", "location",
                                      "parameter", "value"]]
@@ -41,7 +41,7 @@ print(air_quality.head())
 '''Add the station coordinates, provided by the stations metadata table,
  to the corresponding rows in the measurements table.'''
 print('''\n            Join table using a common identifier''')
-stations_coord = pd.read_csv("./air_quality_stations.csv")
+stations_coord = pd.read_csv("sample_data/air_quality_stations.csv")
 print("\n", stations_coord.head())
 print(air_quality.head())
 
@@ -60,7 +60,7 @@ air_quality table, the corresponding coordinates are added from
 
 '''Next we add air quality parameters metadata stored in a data file air_quality_parameters.csv'''
 
-air_quality_parameters = pd.read_csv('./air_quality_parameters.csv')
+air_quality_parameters = pd.read_csv('sample_data/air_quality_parameters.csv')
 print(air_quality_parameters.head())
 air_quality = pd.merge(air_quality, air_quality_parameters,
                        how='left', left_on='parameter', right_on='id')
